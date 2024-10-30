@@ -45,8 +45,7 @@ h3 {
 }
 
 .ear-diagram {
-  /* width: 65%; */
-  max-width: 700px;
+  width: 700px;
   height: auto;
   z-index: 1;
   border-radius: 10px;
