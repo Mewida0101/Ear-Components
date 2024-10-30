@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نشاط توصيل أجزاء الأذن</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <h1>نشاط توصيل أجزاء الأذن</h1>
+    <h3>اسحب الأسماء وأفلتها في مكانها الصحيح حسب رقمها على صورة الأذن</h3>
+
+    <div class="container">
+      <img src="ear-diagram.png" alt="صورة الأذن" class="ear-diagram">
+      <!-- صورة الأذن مع مناطق الإسقاط -->
+      <div class="ear-parts2">
+        <div class="dropzone" data-part="الصيوان">1</div>
+        <div class="dropzone" data-part="القناة السمعية">2</div>
+        <div class="dropzone" data-part="الطبلة">3</div>
+        <div class="dropzone" data-part="المطرقة">4</div>
+        <div class="dropzone" data-part="السندان">5</div>
+        <div class="dropzone" data-part="الركاب">6</div>
+        <div class="dropzone" data-part="القوقعة">7</div>
+        <div class="dropzone" data-part="القنوات الهلالية">8</div>
+        <div class="dropzone" data-part="الأذن الخارجية">9</div>
+        <div class="dropzone" data-part="الأذن الوسطى">10</div>
+        <div class="dropzone" data-part="الأذن الداخلية">11</div>
+      </div>
+      <!-- الأجزاء المتاحة للسحب -->
+      <div class="ear-parts">
+        <div class="part" id="ea7" data-part="القوقعة">القوقعــــــة</div>
+        <div class="part" id="ea10" data-part="الأذن الوسطى">الأذن الوسطى</div>
+        <div class="part" id="ea4" data-part="المطرقة">المطـــــــرقة</div>
+        <div class="part" id="ea1" data-part="الصيوان">الصيــــــوان</div>
+        <div class="part" id="ea11" data-part="الأذن الداخلية">الأذن الداخلية</div>
+        <div class="part" id="ea9" data-part="الأذن الخارجية">الأذن الخارجية</div>
+        <div class="part" id="ea2" data-part="القناة السمعية">القناة السمعية</div>
+        <div class="part" id="ea3" data-part="الطبلة">الطبلــــة</div>
+        <div class="part" id="ea5" data-part="السندان">السنــــــدان</div>
+        <div class="part" id="ea6" data-part="الركاب">الركــــــاب</div>
+        <div class="part" id="ea8" data-part="القنوات الهلالية">القنوات الهلالية</div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="correctSound" src="correct.mp3"></audio>
+  <audio id="errorSound" src="error.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
