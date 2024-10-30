@@ -12,7 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   background: rgb(242, 239, 239);
-  overflow: hidden;
 }
 
 .page {
@@ -46,8 +45,8 @@ h3 {
 }
 
 .ear-diagram {
-  width: 65%;
-  max-width: 1000px;
+  /* width: 65%; */
+  max-width: 700px;
   height: auto;
   z-index: 1;
   border-radius: 10px;
