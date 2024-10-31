@@ -2,9 +2,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  -webkit-user-select: none;
 }
-
 body {
   font-family: Arial, sans-serif;
   height: 100vh;
@@ -13,10 +11,9 @@ body {
   align-items: center;
   background: rgb(242, 239, 239);
 }
-
 .page {
-  width: 90vw;
-  height: 90vh;
+  width: 800px;
+  height: 600px;
   padding: 20px;
   margin: auto;
   display: flex;
@@ -25,43 +22,39 @@ body {
   box-shadow: 4px 4px 8px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background: rgb(245, 165, 165);
+  overflow: hidden;
 }
 h1 {
-  margin: 40px auto 0;
-  font-size: 2em;
-}
-h3 {
-  margin: 50px;
+  margin: 20px auto 0;
   font-size: 1.5em;
 }
-
+h3 {
+  margin: 20px;
+  font-size: 1.5em;
+}
 .container {
-  position: relative;
-  margin: 20px auto;
+  margin: auto;
   width: 100%;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-around;
   align-items: flex-start;
 }
-
 .ear-diagram {
-  width: 700px;
+  width: 50%;
   height: auto;
   z-index: 1;
   border-radius: 10px;
-  -webkit-user-drag: none;
   box-shadow: 4px 4px 8px 10px rgba(0, 0, 0, 0.2);
 }
-
 .ear-parts {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 3px;
 }
-
 .part {
-  width: 150px;
-  padding: 8px;
+  width: 120px;
+  padding: 4px;
   border: 2px solid #333;
   border-radius: 8px;
   background-color: #f0f0f0;
@@ -71,17 +64,16 @@ h3 {
   font-weight: bold;
   box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
-
 .ear-parts2 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 3px;
   z-index: 10;
 }
-
 .dropzone {
-  width: 150px;
-  padding: 8px;
+  position: relative;
+  width: 120px;
+  padding: 4px;
   border: 2px dashed #555;
   border-radius: 8px;
   background-color: rgba(240, 240, 240, 0.8);
@@ -91,17 +83,32 @@ h3 {
   font-weight: bold;
   box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
-
-.dragging {
-  opacity: 0.6;
-  transform: scale(1.1);
-  /* تكبير العنصر قليلاً أثناء السحب */
+.dropzone p {
+  position: absolute;
+  /* right: -20px; */
+  display: inline-block;
 }
-
+.dropzone::after {
+  content: attr(data-number);
+  display: inline-block;
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 8px;
+}
 .correct {
   background-color: #a0e7a0;
 }
-
 .incorrect {
   background-color: #f3a0a0;
 }
