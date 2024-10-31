@@ -19,11 +19,14 @@ function dragStart(event) {
 }
 
 // إضافة مستمعات الأحداث لمناطق الإسقاط
-dropzones.forEach(zone => {
+// dropzones.forEach(zone => {
+//   zone.addEventListener('dragover', dragOver);
+//   zone.addEventListener('drop', dropPart);
+// });
+dropzones.forEach((zone, index) => {
   zone.addEventListener('dragover', dragOver);
-  zone.addEventListener('drop', dropPart);
+  zone.addEventListener('drop', (event) => dropPart(event, index + 1));
 });
-
 // معالجة السحب فوق منطقة الإسقاط
 function dragOver(event) {
   event.preventDefault();
@@ -41,6 +44,7 @@ function dropPart(event) {
     event.target.classList.add('correct');
     document.getElementById(draggedElementId).style.visibility = 'hidden'; // إخفاء العنصر المسحوب
     correctSound.play();
+
   }
   else {
     event.target.classList.add('incorrect');
